@@ -39,14 +39,7 @@ JOIN category c
     
 /* #6 */
 
-SELECT p.amount
-FROM sakila.payment p
-JOIN sakila.rental r
-	ON r.rental_id = p.rental_id AND r.customer_id = 95
-JOIN sakila.inventory i
-	ON i.inventory_id = r.inventory_id
-JOIN sakila.film f
-	ON f.film_id = i.film_id AND f.title = "CLOSER BANG";
+SELECT rental_rate FROM sakila.film WHERE title = "CLOSER BANG";
     
 /* #7 */
 SELECT st.first_name, st.last_name
